@@ -15,11 +15,11 @@ public class Main {
     public static void main(String[] args) {
         UI ui = new ScannerUI();
         ui.showMessage("Välkommen till Äventyrsspelet!");
-//        ui.showMessage("Version 1.0 av Håkan Gleissman");
-        AppInfo appInfo = AppInfo.getInstance();                // Hämtar AppInfo
-        String version = appInfo.getProperty("app.version");    // Hämtar versionen
-        String author = appInfo.getProperty("app.author");      // Hämtar författaren
-        ui.showMessage("Version " + version + " av " + author); // Skriver ut de nya versionen och författaren
+//        ui.showMessage("Version 1.0 av Håkan Gleissman");     // 1.1 Plocka bort
+        AppInfo appInfo = AppInfo.getInstance();                // 1.1 Hämtar AppInfo
+        String version = appInfo.getProperty("app.version");    // 1.1 Hämtar versionen
+        String author = appInfo.getProperty("app.author");      // 1.1 Hämtar författaren
+        ui.showMessage("Version " + version + " av " + author); // 1.1 Skriver ut de nya versionen och författaren
         String name = ui.getInput("Ange ditt namn:");
         Player player = new Player(name, 100, 0, 10);
 
