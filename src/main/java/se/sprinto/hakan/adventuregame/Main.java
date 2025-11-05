@@ -21,7 +21,13 @@ public class Main {
         String author = appInfo.getProperty("app.author");      // 1.1 Hämtar författaren
         ui.showMessage("Version " + version + " av " + author); // 1.1 Skriver ut de nya versionen och författaren
         String name = ui.getInput("Ange ditt namn:");
-        Player player = new Player(name, 100, 0, 10);
+//        Player player = new Player(name, 100, 0, 10);         // 1.2 Plockat bort
+        Player player = new Player.Builder()                    // 1.2 Instancera ny Player Builder
+                .name(name)
+                .health(100)
+                .score(0)
+                .strength(10)
+                .build();
 
         new StartRoom().enterRoom(player, ui);
 

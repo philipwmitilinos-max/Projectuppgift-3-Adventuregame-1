@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
+
+// 1.1
 public class AppInfo {
     private static AppInfo instance;
     private Properties properties;
